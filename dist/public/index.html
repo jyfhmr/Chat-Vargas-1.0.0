@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    *
+    {
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    
+    #ConversacionContainer
+    {
+        letter-spacing: 1.2px;
+        font-weight: bolder;
+        color: white;
+        padding: 1%;
+        height: 90vh;
+        width: 100vw;
+        background-color: rgb(123, 123, 184);
+        overflow-y: auto;
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='2000' height='1000' preserveAspectRatio='none' viewBox='0 0 2000 1000'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1032%26quot%3b)' fill='none'%3e%3crect width='2000' height='1000' x='0' y='0' fill='url(%23SvgjsLinearGradient1033)'%3e%3c/rect%3e%3cpath d='M595.194%2c1022.429C685.561%2c1022.476%2c780.059%2c998.783%2c827.209%2c921.692C876.097%2c841.76%2c862.266%2c741.713%2c817.091%2c659.626C770.017%2c574.088%2c692.802%2c497.778%2c595.194%2c500.102C500.337%2c502.361%2c436.581%2c586.624%2c390.876%2c669.775C347.31%2c749.034%2c318.254%2c843.196%2c363.594%2c921.453C408.845%2c999.556%2c504.929%2c1022.382%2c595.194%2c1022.429' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M-131.20815994179142 555.401069962614L109.54085476233482 584.9613320208671 139.10111682058792 344.21231731674084-101.6478978835383 314.65205525848774z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M177.42396264632293 484.4881018350115L285.24264297166667 318.46189355728995 119.21643469394516 210.64321323194628 11.397754368601426 376.66942150966776z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M56.06628151689111 831.3461256632123L167.68343159209178 645.5839929146173-18.078701156503314 533.9668428394166-129.69585123170398 719.7289755880116z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M2075.9857573377676 731.4494861182311L1973.7576642252816 617.9136865403801 1860.2218646474307 720.1417796528661 1962.4499577599167 833.6775792307171z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1773.7363740312614 40.25814355316455L1545.9829993581084 211.88262146269818 1717.607477267642 439.6359961358512 1945.360851940795 268.0115182263176z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1032'%3e%3crect width='2000' height='1000' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='12.5%25' y1='-25%25' x2='87.5%25' y2='125%25' gradientUnits='userSpaceOnUse' id='SvgjsLinearGradient1033'%3e%3cstop stop-color='%230e2a47' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(15%2c 33%2c 57%2c 1)' offset='1'%3e%3c/stop%3e%3c/linearGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+    }
+
+    #form
+    {
+        width: 100vw;
+        height: 10vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background-image: linear-gradient(to top,rgb(30, 73, 102), rgb(9, 47, 70));
+    }
+
+    #input
+    {
+        width: 90%;
+        height: 50%;
+    }
+    #button
+    {
+        width: 5%;
+        height: 50%;
+    }
+
+    .WelcomeText
+    {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .MyMessages
+    {
+        width: 100%;
+        text-align: right;
+    }
+
+    .Imagenes
+    {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+
+    .divContenedorDeMensajeFromAdmin
+    {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+
+    </style>
+</head>
+<body>
+   <div id="ConversacionContainer">
+   <h1 class="WelcomeText">Bienvenido al chat de Método Vargas</h1>
+   <h3 class="WelcomeText">Escríbenos y nuestros profesionales atenderán sus dudas en breve</h3>
+   <hr style="margin-bottom: 20px;">
+   </div>
+   <form id="form">
+    <input type="text" id="input" required="">
+    <button id="button">submit</button>
+   </form>
+    
+
+
+    <script src="/socket.io/socket.io.min.js"></script>
+    <script src="pac.js"></script>
+</body>
+</html>
